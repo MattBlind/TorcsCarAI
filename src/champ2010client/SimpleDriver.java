@@ -150,7 +150,7 @@ public class SimpleDriver extends Controller{
 		// after car is stuck for a while apply recovering policy
 	    if (stuck > stuckTime)
 	    {
-	    	/* set gear and sterring command assuming car is 
+	    	/* set gear and steering command assuming car is
 	    	 * pointing in a direction out of track */
 	    	
 	    	// to bring car parallel to track axis
@@ -220,7 +220,7 @@ public class SimpleDriver extends Controller{
 	private float filterABS(SensorModel sensors,float brake){
 		// convert speed to m/s
 		float speed = (float) (sensors.getSpeed() / 3.6);
-		// when spedd lower than min speed for abs do nothing
+		// when speed lower than min speed for abs do nothing
 	    if (speed < absMinSpeed)
 	        return brake;
 	    

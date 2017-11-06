@@ -7,16 +7,18 @@ public class MattDriverSimple extends Controller {
 
     @Override
     public Action control(SensorModel sensors) {
+
+
         return null;
     }
 
     @Override
     public void reset() {
-
+        System.out.println("Restarting.");
     }
 
     @Override
     public void shutdown() {
-
+        System.out.println("Game Over.");
     }
 }
