@@ -68,7 +68,7 @@ public class SimpleDriver extends Controller{
 	    	// to shift down the gear from the current one
 	        if (gear > 1 && rpm <= gearDown[gear-1])
 	            return gear - 1;
-	        else // otherwhise keep current gear
+	        else // otherwise keep current gear
 	            return gear;
 	}
 

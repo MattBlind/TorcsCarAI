@@ -5,11 +5,18 @@ package champ2010client;
  */
 public class MattDriverSimple extends Controller {
 
-    @Override
-    public Action control(SensorModel sensors) {
+    double maintainSpeed = 45;
+    public Action control(SensorModel sensorsModel) {
 
-
-        return null;
+        Action action = new Action();
+        if (sensorsModel.getSpeed() < maintainSpeed)
+            action.accelerate = 1;
+        if (sensorsModel.getAngleToTrackAxis()<0)
+            action.steering = -0.3;
+        else
+            action.steering = 0.3;
+        action.gear = 1;
+        return action;
     }
 
     @Override

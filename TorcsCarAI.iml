@@ -7,5 +7,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" name="jenetics-4.1.0-javadoc" level="project" />
+    <orderEntry type="library" name="CIContest-driver" level="project" />
   </component>
 </module>

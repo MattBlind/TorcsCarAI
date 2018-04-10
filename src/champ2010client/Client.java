@@ -15,7 +15,7 @@ import java.util.StringTokenizer;
  * @author Daniele Loiacono
  * 
  */
-public class Client2 {
+public class Client {
 
 	private static int UDP_TIMEOUT = 10000;
 	private static int port;
@@ -64,7 +64,7 @@ public class Client2 {
 		do {
 
 			/*
-			 * Client2 identification
+			 * Client identification
 			 */
 
 			do {
@@ -123,7 +123,7 @@ public class Client2 {
 		 */
 		driver.shutdown();
 		mySocket.close();
-		System.out.println("Client2 shutdown.");
+		System.out.println("Client shutdown.");
 		System.out.println("Bye, bye!");
 
 	}

@@ -3,6 +3,7 @@
  */
 package champ2010client;
 
+import javax.xml.crypto.Data;
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
@@ -46,9 +47,9 @@ public class SocketHandler {
 			System.out.println("Sending: " + msg);
 		try {
 			byte[] buffer = msg.getBytes();
-			socket
-					.send(new DatagramPacket(buffer, buffer.length, address,
-							port));
+			DatagramPacket datagramPacket = new DatagramPacket(buffer, buffer.length, address, port);
+			socket.send(datagramPacket);
+			socket.setSoTimeout(1010);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

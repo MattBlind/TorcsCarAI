@@ -11,7 +11,7 @@ import champ2010client.Controller.Stage;
  * @author Daniele Loiacono
  * 
  */
-public class Client {
+public class Client3 {
 
 	private static int UDP_TIMEOUT = 10000;
 	private static int port;
@@ -57,7 +57,7 @@ public class Client {
 		do {
 
 			/*
-			 * Client2 identification
+			 * Client identification
 			 */
 
 			do {
@@ -116,7 +116,7 @@ public class Client {
 		 */
 		driver.shutdown();
 		mySocket.close();
-		System.out.println("Client2 shutdown.");
+		System.out.println("Client shutdown.");
 		System.out.println("Bye, bye!");
 
 	}

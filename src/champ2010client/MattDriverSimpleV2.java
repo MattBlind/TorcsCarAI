@@ -3,20 +3,47 @@ package champ2010client;
 /**
  * Created by mattster on 06/11/17.
  */
-public class MattDriverSimple extends Controller {
+public class MattDriverSimpleV2 extends Controller {
 
-    double maintainSpeed = 30;
     public Action control(SensorModel sensorsModel) {
 
         Action action = new Action();
-        if (sensorsModel.getSpeed() < maintainSpeed)
-            action.accelerate = 1;
-        if (sensorsModel.getAngleToTrackAxis()<0)
-            action.steering = -1;
-        else
-            action.steering = 1;
-        action.gear = 1;
+        action.gear = setGear(sensorsModel);
+        speedByTrack(sensorsModel, action);
+        steering(sensorsModel,action);
+        System.out.println(sensorsModel.getLastLapTime());
         return action;
+    }
+
+    private void steering(SensorModel sensorsModel, Action action) {
+        double steering = (sensorsModel.getAngleToTrackAxis() - sensorsModel.getTrackPosition()*0.6);
+        action.steering = steering;
+    }
+
+    private int setGear(SensorModel sensorsModel) {
+        int currentGear = sensorsModel.getGear();
+        if(currentGear<1) currentGear = 1;
+        else if (sensorsModel.getRPM()< 3000 && currentGear != 1) currentGear--;
+                else if(sensorsModel.getRPM() > 7000) currentGear++;
+        return currentGear;
+    }
+
+    private void speedByTrack(SensorModel sensors, Action action) {
+        double[] distSensors;
+        int caseX = 0;
+        distSensors = sensors.getTrackEdgeSensors();
+        for(int i=8; i<11;i++){
+            if (distSensors[i]<10)
+                caseX = 2;
+            else if (distSensors[i]<30)
+                    caseX = 1;
+        }
+        if(caseX == 0) action.accelerate = 1;
+            else if(caseX == 1) action.accelerate = 0.6;
+            else if(caseX == 2) {
+            System.out.println("case 2");
+                action.accelerate = 0.2;
+        }
     }
 
     @Override
