@@ -3,19 +3,15 @@
  */
 package champ2010client;
 
-import champ2010client.Action;
-import champ2010client.Controller;
-import champ2010client.Controller.Stage;
-import champ2010client.MessageBasedSensorModel;
-import champ2010client.SocketHandler;
-
 import java.util.StringTokenizer;
+
+import champ2010client.Controller.Stage;
 
 /**
  * @author Daniele Loiacono
  * 
  */
-public class Client2 {
+public class Client {
 
 	private static int UDP_TIMEOUT = 10000;
 	private static int port;
@@ -28,7 +24,7 @@ public class Client2 {
 	private static String trackName;
 
 	/**
-	 * @param driverArgs
+	 * @param args
 	 *            is used to define all the options of the client.
 	 *            <port:N> is used to specify the port for the connection (default is 3001)
 	 *            <host:ADDRESS> is used to specify the address of the host where the server is running (default is localhost)  
@@ -39,15 +35,12 @@ public class Client2 {
 	 *            <stage:N> is used to set the current stage: 0 is WARMUP, 1 is QUALIFYING, 2 is RACE, others value means UNKNOWN (default is UNKNOWN)
 	 *            <trackName:name> is used to set the name of current track
 	 */
-//	public static void main(String[] args) {
-	public static void main(Controller driverArgs) {
-		parseParameters();
-//		port = 3001;
+	public static void main(String[] args) {
+		parseParameters(args);
 		SocketHandler mySocket = new SocketHandler(host, port, verbose);
 		String inMsg;
 
-//		Controller driver = load(args[0]);
-		Controller driver = driverArgs;
+		Controller driver = load("champ2010client.MattDriverSimpleV2");
 		driver.setStage(stage);
 		driver.setTrackName(trackName);
 		
@@ -128,7 +121,7 @@ public class Client2 {
 
 	}
 
-	private static void parseParameters() {
+	private static void parseParameters(String[] args) {
 		/*
 		 * Set default values for the options
 		 */
@@ -141,7 +134,7 @@ public class Client2 {
 		stage = Stage.UNKNOWN;
 		trackName = "unknown";
 		
-		/*for (int i = 1; i < args.length; i++) {
+		for (int i = 1; i < args.length; i++) {
 			StringTokenizer st = new StringTokenizer(args[i], ":");
 			String entity = st.nextToken();
 			String value = st.nextToken();
@@ -190,7 +183,7 @@ public class Client2 {
 					System.exit(0);
 				}
 			}
-		}*/
+		}
 	}
 
 	private static Controller load(String name) {
