@@ -3,7 +3,7 @@ package champ2010client;
 /**
  * Created by mattster on 06/11/17.
  */
-public class MattDriverSimpleV2 extends Controller {
+public class HardcodeDriver extends Controller {
 
     public Action control(SensorModel sensorsModel) {
 
@@ -35,11 +35,11 @@ public class MattDriverSimpleV2 extends Controller {
         for(int i=8; i<11;i++){
             if (distSensors[i]<10)
                 caseX = 2;
-            else if (distSensors[i]<30)
+            else if (distSensors[i]<100)
                     caseX = 1;
         }
         if(caseX == 0) action.accelerate = 1;
-            else if(caseX == 1) action.accelerate = 0.6;
+            else if(caseX == 1) action.accelerate = 0.5;
             else if(caseX == 2) {
             System.out.println("case 2");
                 action.accelerate = 0.2;

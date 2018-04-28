@@ -40,7 +40,7 @@ public class Client3 {
 		SocketHandler mySocket = new SocketHandler(host, port, verbose);
 		String inMsg;
 
-		Controller driver = load("champ2010client.MattDriverSimpleV2");
+		Controller driver = load("champ2010client.HardcodeDriver");
 		driver.setStage(stage);
 		driver.setTrackName(trackName);
 		

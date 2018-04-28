@@ -16,6 +16,9 @@ public class Individual {
             double gene = randInstance.nextDouble();
             genes[i] = gene;
         }
+        if (fitness == 0) {
+            setNewFitness();
+        }
     }
 
     /* Getters and setters */
@@ -43,11 +46,14 @@ public class Individual {
         return genes.length;
     }
 
-    public double getFitness() {
-        if (fitness == 0) {
-            fitness = FitnessCalc.getFitness(this);
-        }
+    public double getIndividualFitness() {
         return fitness;
+    }
+
+    public void setNewFitness(){
+        System.out.println();
+        System.out.println("Setting fitness");
+        fitness = FitnessCalc.getCalcFitness(this);
     }
 
     @Override
