@@ -3,7 +3,7 @@ package champ2010client;
 /**
  * Created by mattster on 06/11/17.
  */
-public class HardcodeDriver extends Controller {
+public class HardcodeDriver extends BackupController {
 
     public Action control(SensorModel sensorsModel) {
 

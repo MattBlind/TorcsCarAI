@@ -7,8 +7,9 @@ public class Algorithm {
     /* TorcsGA parameters */
     private static final double uniformRate = 0.5;
     private static final double mutationRate = 0.015;
-    private static final int tournamentSize = 3;
-    private static final boolean elitism = true;
+    private static final double mutationOffset = 0.1;
+    private static final int tournamentSize = 5;
+    private static final boolean elitism = false;
 
     /* Public methods */
 
@@ -28,14 +29,13 @@ public class Algorithm {
         } else {
             elitismStart = 0;
         }
-        // Loop over the population size and create new individuals with
-        // crossover
+        // Loop over the population size and create new individuals with crossover
         for (int i = elitismStart; i < pop.size(); i++) {
-            Individual indiv1 = tournamentSelection(pop);
-            Individual indiv2 = tournamentSelection(pop);
-            Individual newIndiv = crossover(indiv1, indiv2);
-//            newIndiv.setNewFitness();
-            newPopulation.saveIndividual(i, newIndiv);
+//            Individual indiv1 = tournamentSelection(pop);
+//            Individual indiv2 = tournamentSelection(pop);
+//            Individual newIndiv = crossover(indiv1, indiv2);
+//            newPopulation.saveIndividual(i, newIndiv); // only with tournament
+            newPopulation.saveIndividual(i, pop.getIndividual(i));
         }
         // Mutate population
         for (int i = elitismStart; i < newPopulation.size(); i++) {
@@ -46,16 +46,19 @@ public class Algorithm {
 
     // Mutate an individual
     private static void mutate(Individual indiv) {
+        double randSign = 1;
+        if(Math.random()<0.5)
+            randSign = -1;
         // Loop through genes
         for (int i = 0; i < indiv.size(); i++) {
-            if (Math.random() <= mutationRate) {
-                // Create random gene
-                double gene = Math.random();
-                indiv.setGene(i, gene);
-            }
+            // Vary gene by mutation offset
+            double gene = indiv.getGene(i) + randSign * mutationOffset;
+            gene = Math.max (0, Math.min (1, gene)); // make sure gene is within parameters
+            if(gene != 0) indiv.setGene(i, gene);
+            else i--;
         }
         // Set new fitness
-        indiv.setNewFitness();
+        //indiv.setNewFitness();
     }
 
     // Select individuals for crossover
@@ -75,9 +78,7 @@ public class Algorithm {
     // Crossover individuals
     private static Individual crossover(Individual indiv1, Individual indiv2) {
         Individual newSol = new Individual();
-        // Loop through genes
         for (int i = 0; i < indiv1.size(); i++) {
-            // Crossover
             if (Math.random() <= uniformRate) {
                 newSol.setGene(i, indiv1.getGene(i));
             } else {

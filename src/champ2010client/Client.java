@@ -1,11 +1,13 @@
 /**
- * 
+ *
  */
 package champ2010client;
 
 import champ2010client.Action;
 import champ2010client.Controller;
 import champ2010client.Controller.Stage;
+import champ2010client.GA.Algorithm;
+import champ2010client.GA.Population;
 import champ2010client.MessageBasedSensorModel;
 import champ2010client.SocketHandler;
 
@@ -13,11 +15,11 @@ import java.util.StringTokenizer;
 
 /**
  * @author Daniele Loiacono
- * 
+ *
  */
 public class Client {
 
-	private static int UDP_TIMEOUT = 10000;
+	private static int UDP_TIMEOUT = 1500;
 	private static int port;
 	private static String host;
 	private static String clientId;
@@ -31,8 +33,8 @@ public class Client {
 	 * @param args
 	 *            is used to define all the options of the client.
 	 *            <port:N> is used to specify the port for the connection (default is 3001)
-	 *            <host:ADDRESS> is used to specify the address of the host where the server is running (default is localhost)  
-	 *            <id:ClientID> is used to specify the ID of the client sent to the server (default is championship2009) 
+	 *            <host:ADDRESS> is used to specify the address of the host where the server is running (default is localhost)
+	 *            <id:ClientID> is used to specify the ID of the client sent to the server (default is championship2009)
 	 *            <verbose:on> is used to set verbose mode on (default is off)
 	 *            <maxEpisodes:N> is used to set the number of episodes (default is 1)
 	 *            <maxSteps:N> is used to set the max number of steps for each episode (0 is default value, that means unlimited number of steps)
@@ -47,7 +49,7 @@ public class Client {
 		Controller driver = load(args[0]);
 		driver.setStage(stage);
 		driver.setTrackName(trackName);
-		
+
 		/* Build init string */
 		float[] angles = driver.initAngles();
 		String initStr = clientId + "(init";
@@ -55,64 +57,112 @@ public class Client {
 			initStr = initStr + " " + angles[i];
 		}
 		initStr = initStr + ")";
-		
+
+
+		/* Build GA population */
+		Population myPop = new Population(2, true);
+		int generationCount = 0;
+
+		/* Initialize some variables */
 		long curEpisode = 0;
 		boolean shutdownOccurred = false;
+		int stepLimit = 14000; // acceptable steps for this track
+		int generationLimit = 3;
+		boolean isEvolved = false;
+		Population emptyPop = new Population(myPop.size(), false);
 		do {
-
-			/*
-			 * Client identification
-			 */
-
-			do {
-				mySocket.send(initStr);
-				inMsg = mySocket.receive(UDP_TIMEOUT);
-			} while (inMsg == null || inMsg.indexOf("***identified***") < 0);
-
-			/*
-			 * Start to drive
-			 */
-			long currStep = 0;
-			while (true) {
-				/*
-				 * Receives from TORCS the game state
-				 */
-				inMsg = mySocket.receive(UDP_TIMEOUT);
-
-				if (inMsg != null) {
+			while (generationCount < generationLimit){
+				generationCount++;
+				System.out.println("Generation: " + generationCount);
+				for(int i = 0; i<myPop.size(); i++){
+					driver.setParameters(myPop.getIndividual(i).getAllGenes());
 
 					/*
-					 * Check if race is ended (shutdown)
+					 * Client identification
 					 */
-					if (inMsg.indexOf("***shutdown***") >= 0) {
-						shutdownOccurred = true;
-						System.out.println("Server shutdown!");
-						break;
-					}
+					do {
+						mySocket.send(initStr);
+						inMsg = mySocket.receive(UDP_TIMEOUT);
+					} while (inMsg == null || inMsg.indexOf("***identified***") < 0);
 
 					/*
-					 * Check if race is restarted
+					 * Start to drive
 					 */
-					if (inMsg.indexOf("***restart***") >= 0) {
-						driver.reset();
-						if (verbose)
-							System.out.println("Server restarting!");
-						break;
+					double fitness = 0;
+					boolean fitnessSet = false;
+					boolean isLastGuy = ((generationCount == generationLimit +1) && (i+1 == myPop.size()));
+					long currStep = 0;
+					while (true) {
+						/*
+						 * Receives from TORCS the game state
+						 */
+						inMsg = mySocket.receive(UDP_TIMEOUT);
+
+						if (inMsg != null) {
+
+							/*
+							 * Check if race is ended (shutdown)
+							 */
+							if (inMsg.indexOf("***shutdown***") >= 0) {
+								shutdownOccurred = true;
+								System.out.println("Server shutdown!");
+								break;
+							}
+
+							/*
+							 * Check if race is restarted
+							 */
+							if (inMsg.indexOf("***restart***") >= 0) {
+								driver.reset();
+								if (verbose)
+									System.out.println("Server restarting!");
+								break;
+							}
+
+							Action action = new Action();
+							if ((currStep < maxSteps || maxSteps == 0) && !fitnessSet)	// check this
+								action = driver.control(new MessageBasedSensorModel(inMsg));
+							else
+							{
+								if(!isLastGuy) action.restartRace = true;
+								else // run until game closes
+									action = driver.control(new MessageBasedSensorModel(inMsg));
+								System.out.println(fitness);
+								System.out.println(currStep);
+							}
+
+							if(currStep > stepLimit){
+								System.out.println("Possible 0 reset");
+								i = resetIndividual(myPop, i, currStep);
+								action.restartRace = true;
+							}
+
+							currStep++;
+							mySocket.send(action.toString());
+							fitness = driver.getLastLapTime();
+							if(fitness != 0 && !fitnessSet) {
+								myPop.getIndividual(i).setNewFitness(fitness);
+								fitnessSet = true;
+							}
+
+						} else
+							System.out.println("Server did not respond within the timeout");
 					}
-
-					Action action = new Action();
-					if (currStep < maxSteps || maxSteps == 0)
-						action = driver.control(new MessageBasedSensorModel(
-								inMsg));
-					else
-						action.restartRace = true;
-
-					currStep++;
-					mySocket.send(action.toString());
-				} else
-					System.out.println("Server did not respond within the timeout");
+				}
+					if(!isEvolved){
+						for (int i = 0; i < myPop.size(); i++)
+							emptyPop.saveIndividual(i, myPop.getIndividual(i));
+						myPop = Algorithm.evolvePopulation(myPop);
+						isEvolved = true;
+						generationLimit++;
+					}
+					else {
+						for (int i = 0; i < myPop.size(); i++)
+							if(myPop.getIndividual(i).getIndividualFitness()>emptyPop.getIndividual(i).getIndividualFitness())
+								myPop.saveIndividual(i, emptyPop.getIndividual(i));
+						isEvolved = false;
+					}
 			}
-
 		} while (++curEpisode < maxEpisodes && !shutdownOccurred);
 
 		/*
@@ -120,9 +170,39 @@ public class Client {
 		 */
 		driver.shutdown();
 		mySocket.close();
+		System.out.println("shutdownOccurred is "+shutdownOccurred);
 		System.out.println("Client shutdown.");
 		System.out.println("Bye, bye!");
+		System.out.println(myPop.getFittest().toString());
+		System.out.println(myPop.getFittest().getIndividualFitness());
 
+	}
+
+	public static Population comparePop(Population popOne, Population popTwo){
+		System.out.println("doing swap");
+		System.out.println();
+		Population newPop = new Population(popOne.size(), false);
+		for(int i=0; i< popOne.size();i++)
+			if(popOne.getIndividual(i).getIndividualFitness() > popTwo.getIndividual(i).getIndividualFitness())
+			{
+				newPop.saveIndividual(i, popTwo.getIndividual(i));
+				System.out.println("swapped");
+			}
+			else {
+				newPop.saveIndividual(i, popOne.getIndividual(i));
+				System.out.println("swapped");
+				System.out.println(popTwo.getIndividual(i).getIndividualFitness()+" "+ popOne.getIndividual(i).getIndividualFitness());
+			}
+		return newPop;
+	}
+
+	private static int resetIndividual(Population myPop, int i, long currStep) {
+		System.out.println(myPop.getIndividual(i).toString());
+		System.out.println(currStep);
+		myPop.getIndividual(i).generateIndividual();
+		i--;
+		System.out.println("Reset individual values");
+		return i;
 	}
 
 	private static void parseParameters(String[] args) {
@@ -137,7 +217,7 @@ public class Client {
 		maxSteps = 0;
 		stage = Stage.UNKNOWN;
 		trackName = "unknown";
-		
+
 		for (int i = 1; i < args.length; i++) {
 			StringTokenizer st = new StringTokenizer(args[i], ":");
 			String entity = st.nextToken();

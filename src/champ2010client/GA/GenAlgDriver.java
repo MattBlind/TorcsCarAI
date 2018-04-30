@@ -14,25 +14,7 @@ public class GenAlgDriver extends Controller {
     private double accel3;
     private double lastLapTime;
 
-    public GenAlgDriver(double steerCoef, double accel1, double accel2, double accel3){
-        this.steerCoef = steerCoef;
-        this.accel1 = accel1;
-        this.accel2 = accel2;
-        this.accel3 = accel3;
-    }
-
-    public GenAlgDriver(double[] individualGenes){
-        steerCoef = individualGenes[0];
-        accel1 = individualGenes[1];
-        accel2 = individualGenes[2];
-        accel3 = individualGenes[3];
-    }
-
     public Action control(SensorModel sensorsModel) {
-        // welcome to hell
-
-
-
         Action action = new Action();
         speedByTrack(sensorsModel, action);
         steering(sensorsModel,action);
@@ -41,8 +23,7 @@ public class GenAlgDriver extends Controller {
     }
 
     private void steering(SensorModel sensorsModel, Action action) {
-        double steering = (sensorsModel.getAngleToTrackAxis() - sensorsModel.getTrackPosition()*steerCoef);
-        action.steering = steering;
+        action.steering = (sensorsModel.getAngleToTrackAxis() - sensorsModel.getTrackPosition()*steerCoef);
     }
 
 
@@ -81,13 +62,20 @@ public class GenAlgDriver extends Controller {
         return currentGear;
     }
 
+    public void setParameters(double[] paramSet){
+        steerCoef = paramSet[0];
+        accel1 = paramSet[1];
+        accel2 = paramSet[2];
+        accel3 = paramSet[3];
+    }
+
     public double getLastLapTime(){
         return lastLapTime;
     }
 
     @Override
     public void reset() {
-        System.out.println("Restarting.");
+        System.out.println("Restarting Race.");
     }
 
     @Override

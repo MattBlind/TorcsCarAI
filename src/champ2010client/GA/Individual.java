@@ -16,10 +16,7 @@ public class Individual {
             double gene = randInstance.nextDouble();
             genes[i] = gene;
         }
-        if (fitness == 0) {
-            setNewFitness();
         }
-    }
 
     /* Getters and setters */
 
@@ -36,11 +33,6 @@ public class Individual {
         fitness = 0;
     }
 
-    public void setAllGenes(double value[]){
-        genes = value;
-        fitness = 0;
-    }
-
     /* Public methods */
     public int size() {
         return genes.length;
@@ -50,17 +42,15 @@ public class Individual {
         return fitness;
     }
 
-    public void setNewFitness(){
-        System.out.println();
-        System.out.println("Setting fitness");
-        fitness = FitnessCalc.getCalcFitness(this);
+    public void setNewFitness(double newFitness){
+        fitness = newFitness;
     }
 
     @Override
     public String toString() {
         String geneString = "";
         for (int i = 0; i < size(); i++) {
-            geneString += genes[i];
+            geneString += genes[i]+" ";
         }
         return geneString;
     }

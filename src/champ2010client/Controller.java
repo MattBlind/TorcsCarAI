@@ -23,6 +23,7 @@ public abstract class Controller {
 	
 	private Stage stage;
 	private String trackName;
+	private double lastLapTime;
 	
 	public float[] initAngles()	{
 		float[] angles = new float[19];
@@ -47,7 +48,11 @@ public abstract class Controller {
 		this.trackName = trackName;
 	}
 
+	public double getLastLapTime() { return lastLapTime; }
+
     public abstract Action control(SensorModel sensors);
+
+	public abstract void setParameters(double[] paramSet); // called to give values to the driver
 
     public abstract void reset(); // called at the beginning of each new trial
     

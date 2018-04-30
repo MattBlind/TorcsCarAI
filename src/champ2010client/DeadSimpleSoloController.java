@@ -8,7 +8,7 @@ package champ2010client;
  * Time: 4:59:21 PM
 
  */
-public class DeadSimpleSoloController extends Controller {
+public class DeadSimpleSoloController extends BackupController {
 
     final double targetSpeed = 15;
 

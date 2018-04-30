@@ -1,6 +1,6 @@
 package champ2010client;
 
-public class SimpleDriver extends Controller{
+public class SimpleDriver extends BackupController{
 	
 	/* Gear Changing Constants*/
 	final int[]  gearUp={5000,6000,6000,6500,7000,0};
