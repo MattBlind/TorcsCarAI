@@ -152,14 +152,17 @@ public class Client {
 					if(!isEvolved){
 						for (int i = 0; i < myPop.size(); i++)
 							emptyPop.saveIndividual(i, myPop.getIndividual(i));
+						System.out.println("done switch");
 						myPop = Algorithm.evolvePopulation(myPop);
 						isEvolved = true;
 						generationLimit++;
 					}
 					else {
-						for (int i = 0; i < myPop.size(); i++)
-							if(myPop.getIndividual(i).getIndividualFitness()>emptyPop.getIndividual(i).getIndividualFitness())
+						for (int i = 0; i < myPop.size(); i++) {
+
+							if (myPop.getIndividual(i).getIndividualFitness() > emptyPop.getIndividual(i).getIndividualFitness())
 								myPop.saveIndividual(i, emptyPop.getIndividual(i));
+						}
 						isEvolved = false;
 					}
 			}

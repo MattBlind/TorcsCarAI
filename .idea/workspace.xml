@@ -7,30 +7,8 @@
     <list default="true" id="471d9346-668d-4c32-b931-9e6a1de8444f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TorcsCarAI/champ2010client/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TorcsCarAI/champ2010client/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TorcsCarAI/champ2010client/Client3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TorcsCarAI/champ2010client/Client3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TorcsCarAI/champ2010client/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TorcsCarAI/champ2010client/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TorcsCarAI/champ2010client/DeadSimpleSoloController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TorcsCarAI/champ2010client/DeadSimpleSoloController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TorcsCarAI/champ2010client/GA/Algorithm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TorcsCarAI/champ2010client/GA/Algorithm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TorcsCarAI/champ2010client/GA/FitnessCalc.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TorcsCarAI/champ2010client/GA/FitnessCalc.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TorcsCarAI/champ2010client/GA/Individual.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TorcsCarAI/champ2010client/GA/Individual.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TorcsCarAI/champ2010client/GA/MattDriverGA.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TorcsCarAI/champ2010client/GA/Population.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TorcsCarAI/champ2010client/GA/Population.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TorcsCarAI/champ2010client/MattDriverSimple.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TorcsCarAI/champ2010client/MattDriverSimple.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TorcsCarAI/champ2010client/MattDriverSimpleV2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TorcsCarAI/champ2010client/SimpleDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TorcsCarAI/champ2010client/SimpleDriver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/champ2010client/BackupClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/champ2010client/BackupClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/champ2010client/BackupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/champ2010client/BackupController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/champ2010client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/champ2010client/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/champ2010client/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/champ2010client/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/champ2010client/DeadSimpleSoloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/champ2010client/DeadSimpleSoloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/champ2010client/GA/Algorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/champ2010client/GA/Algorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/champ2010client/GA/FitnessCalc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/champ2010client/GA/FitnessCalc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/champ2010client/GA/GenAlgDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/champ2010client/GA/GenAlgDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/champ2010client/GA/Individual.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/champ2010client/GA/Individual.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/champ2010client/GA/Population.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/champ2010client/GA/Population.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/champ2010client/HardcodeDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/champ2010client/HardcodeDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/champ2010client/MattDriverSimple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/champ2010client/MattDriverSimple.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/champ2010client/SimpleDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/champ2010client/SimpleDriver.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,8 +29,8 @@
       <file leaf-file-name="Client.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/champ2010client/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="161" column="83" lean-forward="true" selection-start-line="161" selection-start-column="83" selection-end-line="161" selection-end-column="83" />
+            <state relative-caret-position="140">
+              <caret line="164" column="25" selection-start-line="164" selection-start-column="25" selection-end-line="164" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -60,8 +38,8 @@
       <file leaf-file-name="Algorithm.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/champ2010client/GA/Algorithm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="37" column="66" lean-forward="true" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="66" />
+            <state relative-caret-position="518">
+              <caret line="37" column="66" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="66" />
             </state>
           </provider>
         </entry>
@@ -69,16 +47,8 @@
       <file leaf-file-name="Population.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/champ2010client/GA/Population.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
+            <state relative-caret-position="546">
               <caret line="45" selection-start-line="45" selection-end-line="45" />
-              <folding>
-                <element signature="e#675#676#0" expanded="true" />
-                <element signature="e#716#717#0" expanded="true" />
-                <element signature="e#1105#1106#0" expanded="true" />
-                <element signature="e#1146#1147#0" expanded="true" />
-                <element signature="e#1235#1236#0" expanded="true" />
-                <element signature="e#1277#1278#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -86,7 +56,7 @@
       <file leaf-file-name="GenAlgDriver.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/champ2010client/GA/GenAlgDriver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="497">
+            <state relative-caret-position="1008">
               <caret line="77" column="43" selection-start-line="77" selection-start-column="43" selection-end-line="77" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -98,12 +68,8 @@
       <file leaf-file-name="Individual.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/champ2010client/GA/Individual.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
+            <state relative-caret-position="252">
               <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
-              <folding>
-                <element signature="e#1128#1129#0" expanded="true" />
-                <element signature="e#1164#1165#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -112,7 +78,7 @@
         <entry file="file://$PROJECT_DIR$/src/champ2010client/Action.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="434">
-              <caret line="31" column="60" lean-forward="true" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="60" />
+              <caret line="31" column="60" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -120,7 +86,7 @@
       <file leaf-file-name="SensorModel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/champ2010client/SensorModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
+            <state relative-caret-position="280">
               <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
             </state>
           </provider>
@@ -178,8 +144,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1367" />
-    <option name="y" value="-17" />
+    <option name="x" value="-1" />
+    <option name="y" value="-785" />
     <option name="width" value="1368" />
     <option name="height" value="786" />
   </component>
@@ -191,9 +157,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -227,6 +190,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -514,19 +480,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-17" width="1368" height="786" extended-state="6" />
+    <frame x="-1" y="-785" width="1368" height="786" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="5" />
       <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.3280116" />
       <window_info id="Palette&#9;" order="2" />
       <window_info id="Image Layers" order="6" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50073206" side_tool="true" weight="0.20029028" />
       <window_info anchor="right" id="Maven Projects" order="7" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49926794" weight="0.6690856" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.32946298" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49926794" weight="0.6690856" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.329927" />
       <window_info id="Capture Tool" order="0" />
       <window_info anchor="right" id="Designer" order="0" />
@@ -535,33 +500,33 @@
       <window_info anchor="right" id="Ant Build" order="3" weight="0.24963397" />
       <window_info id="UI Designer" order="1" />
       <window_info anchor="right" id="Theme Preview" order="12" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.39912918" />
       <window_info id="Favorites" order="5" side_tool="true" weight="0.23352855" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.39912918" />
       <window_info anchor="right" id="JetGradle" order="10" />
+      <window_info anchor="right" id="IDEtalk" order="6" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="2" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Database" order="9" />
+      <window_info anchor="right" id="CDI" order="8" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.3280116" />
       <window_info anchor="bottom" id="Changes" order="10" />
       <window_info anchor="right" id="Properties" order="11" />
       <window_info id="Nl-Palette" order="6" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.3280116" />
       <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="right" id="CDI" order="8" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
       <window_info anchor="bottom" id="IDEtalk Messages" order="13" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Application Servers" order="9" />
-      <window_info anchor="right" id="IDEtalk" order="6" />
     </layout>
     <layout-to-restore>
       <window_info anchor="bottom" id="Application Servers" order="9" />
       <window_info anchor="right" id="Designer" order="0" />
-      <window_info anchor="right" id="IDEtalk" order="6" />
+      <window_info anchor="right" id="Palette" order="5" />
       <window_info id="Image Layers" order="6" />
       <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49926794" weight="0.6690856" />
       <window_info anchor="right" id="JetGradle" order="10" />
       <window_info anchor="right" id="Ant Build" order="3" weight="0.24963397" />
-      <window_info anchor="right" id="Palette" order="5" />
       <window_info id="UI Designer" order="1" />
       <window_info anchor="right" id="Properties" order="11" />
       <window_info anchor="bottom" id="Changes" order="10" />
@@ -569,25 +534,26 @@
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="2" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50073206" side_tool="true" weight="0.20029028" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="IDEtalk Messages" order="13" />
       <window_info anchor="bottom" id="Messages" order="11" visible="true" weight="0.3280116" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="IDEtalk Messages" order="13" />
-      <window_info anchor="right" id="Theme Preview" order="12" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.32946298" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info id="Nl-Palette" order="7" />
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.329927" />
-      <window_info id="Structure" order="4" sideWeight="0.43251088" side_tool="true" weight="0.14787701" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.3280116" />
       <window_info active="true" content_ui="combo" id="Project" order="3" sideWeight="0.5674891" visible="true" weight="0.14787701" />
+      <window_info anchor="right" id="IDEtalk" order="6" />
       <window_info anchor="right" id="Database" order="9" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info id="Palette&#9;" order="2" />
-      <window_info id="Favorites" order="5" side_tool="true" weight="0.23352855" />
+      <window_info anchor="right" id="Theme Preview" order="12" />
+      <window_info id="Structure" order="4" sideWeight="0.43251088" side_tool="true" weight="0.14787701" />
       <window_info anchor="right" id="CDI" order="8" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="2" weight="0.3280116" />
+      <window_info id="Favorites" order="5" side_tool="true" weight="0.23352855" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
     </layout-to-restore>
   </component>
@@ -596,7 +562,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="2" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -604,6 +570,20 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/champ2010client/Action.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="434">
+          <caret line="31" column="60" lean-forward="true" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/champ2010client/SensorModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/champ2010client/Client.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="518">
@@ -646,10 +626,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="434">
           <caret line="33" selection-start-line="33" selection-end-line="33" />
-          <folding>
-            <element signature="e#675#676#0" expanded="true" />
-            <element signature="e#716#717#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -868,19 +844,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/optclient-java/src/evaluator/FitnessFunction.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/optclient-java/src/evaluator/DefaultFitness.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/optclient-java/src/evaluator/ServerCommunication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="301">
           <caret line="83" column="4" lean-forward="true" selection-start-line="83" selection-start-column="4" selection-end-line="83" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -914,7 +881,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/champ2010client/SensorModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
+        <state relative-caret-position="280">
           <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
         </state>
       </provider>
@@ -922,13 +889,13 @@
     <entry file="file://$PROJECT_DIR$/src/champ2010client/Action.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="434">
-          <caret line="31" column="60" lean-forward="true" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="60" />
+          <caret line="31" column="60" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="60" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/champ2010client/GA/GenAlgDriver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="497">
+        <state relative-caret-position="1008">
           <caret line="77" column="43" selection-start-line="77" selection-start-column="43" selection-end-line="77" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -938,41 +905,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/champ2010client/GA/Individual.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
+        <state relative-caret-position="252">
           <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
-          <folding>
-            <element signature="e#1128#1129#0" expanded="true" />
-            <element signature="e#1164#1165#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/champ2010client/GA/Population.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
+        <state relative-caret-position="546">
           <caret line="45" selection-start-line="45" selection-end-line="45" />
-          <folding>
-            <element signature="e#675#676#0" expanded="true" />
-            <element signature="e#716#717#0" expanded="true" />
-            <element signature="e#1105#1106#0" expanded="true" />
-            <element signature="e#1146#1147#0" expanded="true" />
-            <element signature="e#1235#1236#0" expanded="true" />
-            <element signature="e#1277#1278#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/champ2010client/GA/Algorithm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="37" column="66" lean-forward="true" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="66" />
+        <state relative-caret-position="518">
+          <caret line="37" column="66" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="66" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/champ2010client/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="161" column="83" lean-forward="true" selection-start-line="161" selection-start-column="83" selection-end-line="161" selection-end-column="83" />
+        <state relative-caret-position="140">
+          <caret line="164" column="25" selection-start-line="164" selection-start-column="25" selection-end-line="164" selection-end-column="25" />
         </state>
       </provider>
     </entry>
