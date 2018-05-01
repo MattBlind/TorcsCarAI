@@ -8,6 +8,7 @@ import champ2010client.Controller;
 import champ2010client.Controller.Stage;
 import champ2010client.GA.Algorithm;
 import champ2010client.GA.Population;
+import champ2010client.GA.Stats;
 import champ2010client.MessageBasedSensorModel;
 import champ2010client.SocketHandler;
 
@@ -19,7 +20,7 @@ import java.util.StringTokenizer;
  */
 public class Client {
 
-	private static int UDP_TIMEOUT = 1500;
+	private static int UDP_TIMEOUT = 1000;
 	private static int port;
 	private static String host;
 	private static String clientId;
@@ -60,16 +61,15 @@ public class Client {
 
 
 		/* Build GA population */
-		Population myPop = new Population(2, true);
+		Population myPop = new Population(50, true);
 		int generationCount = 0;
 
 		/* Initialize some variables */
 		long curEpisode = 0;
 		boolean shutdownOccurred = false;
-		int stepLimit = 14000; // acceptable steps for this track
-		int generationLimit = 3;
-		boolean isEvolved = false;
-		Population emptyPop = new Population(myPop.size(), false);
+		int stepLimit = 14300; // acceptable steps for this track
+		int generationLimit = 5;
+		Stats mainStats = new Stats(generationLimit, myPop.size());
 		do {
 			while (generationCount < generationLimit){
 				generationCount++;
@@ -90,7 +90,7 @@ public class Client {
 					 */
 					double fitness = 0;
 					boolean fitnessSet = false;
-					boolean isLastGuy = ((generationCount == generationLimit +1) && (i+1 == myPop.size()));
+					boolean isLastGuy = ((generationCount == generationLimit) && (i+1 == myPop.size()));
 					long currStep = 0;
 					while (true) {
 						/*
@@ -124,11 +124,14 @@ public class Client {
 								action = driver.control(new MessageBasedSensorModel(inMsg));
 							else
 							{
-								if(!isLastGuy) action.restartRace = true;
+								if(!isLastGuy) {
+									action.restartRace = true;
+									System.out.println(fitness);
+									System.out.println(currStep);
+								}
 								else // run until game closes
 									action = driver.control(new MessageBasedSensorModel(inMsg));
-								System.out.println(fitness);
-								System.out.println(currStep);
+
 							}
 
 							if(currStep > stepLimit){
@@ -142,6 +145,7 @@ public class Client {
 							fitness = driver.getLastLapTime();
 							if(fitness != 0 && !fitnessSet) {
 								myPop.getIndividual(i).setNewFitness(fitness);
+								mainStats.addData(i, generationCount-1, fitness);
 								fitnessSet = true;
 							}
 
@@ -149,22 +153,8 @@ public class Client {
 							System.out.println("Server did not respond within the timeout");
 					}
 				}
-					if(!isEvolved){
-						for (int i = 0; i < myPop.size(); i++)
-							emptyPop.saveIndividual(i, myPop.getIndividual(i));
-						System.out.println("done switch");
-						myPop = Algorithm.evolvePopulation(myPop);
-						isEvolved = true;
-						generationLimit++;
-					}
-					else {
-						for (int i = 0; i < myPop.size(); i++) {
-
-							if (myPop.getIndividual(i).getIndividualFitness() > emptyPop.getIndividual(i).getIndividualFitness())
-								myPop.saveIndividual(i, emptyPop.getIndividual(i));
-						}
-						isEvolved = false;
-					}
+				if(generationCount != generationLimit)
+					myPop = Algorithm.evolvePopulation(myPop);
 			}
 		} while (++curEpisode < maxEpisodes && !shutdownOccurred);
 
@@ -178,25 +168,9 @@ public class Client {
 		System.out.println("Bye, bye!");
 		System.out.println(myPop.getFittest().toString());
 		System.out.println(myPop.getFittest().getIndividualFitness());
+		mainStats.processData();
+		System.out.println(mainStats.toString());
 
-	}
-
-	public static Population comparePop(Population popOne, Population popTwo){
-		System.out.println("doing swap");
-		System.out.println();
-		Population newPop = new Population(popOne.size(), false);
-		for(int i=0; i< popOne.size();i++)
-			if(popOne.getIndividual(i).getIndividualFitness() > popTwo.getIndividual(i).getIndividualFitness())
-			{
-				newPop.saveIndividual(i, popTwo.getIndividual(i));
-				System.out.println("swapped");
-			}
-			else {
-				newPop.saveIndividual(i, popOne.getIndividual(i));
-				System.out.println("swapped");
-				System.out.println(popTwo.getIndividual(i).getIndividualFitness()+" "+ popOne.getIndividual(i).getIndividualFitness());
-			}
-		return newPop;
 	}
 
 	private static int resetIndividual(Population myPop, int i, long currStep) {
