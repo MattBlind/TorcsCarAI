@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Individual {
 
-    private static int defaultGeneLength = 4;
+    private static int defaultGeneLength = 6;
     private double[] genes = new double[defaultGeneLength];
     // Cache
     private double fitness = 0;
@@ -15,6 +15,7 @@ public class Individual {
             Random randInstance = new Random();
             double gene = randInstance.nextDouble();
             genes[i] = gene;
+            if(i>3) genes[i] *= 200;
         }
         }
 

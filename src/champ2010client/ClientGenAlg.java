@@ -18,7 +18,7 @@ import java.util.StringTokenizer;
  * @author Daniele Loiacono
  *
  */
-public class Client {
+public class ClientGenAlg {
 
 	private static int UDP_TIMEOUT = 1000;
 	private static int port;
@@ -61,7 +61,7 @@ public class Client {
 
 
 		/* Build GA population */
-		Population myPop = new Population(50, true);
+		Population myPop = new Population(75, true);
 		int generationCount = 0;
 
 		/* Initialize some variables */
@@ -180,6 +180,7 @@ public class Client {
 		myPop.getIndividual(i).generateIndividual();
 		i--;
 		System.out.println("Reset individual values");
+		if(i<0) i=0;
 		return i;
 	}
 

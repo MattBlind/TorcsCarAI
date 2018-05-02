@@ -35,7 +35,6 @@ public class Algorithm {
             Individual indiv2 = tournamentSelection(pop);
             Individual newIndiv = crossover(indiv1, indiv2);
             newPopulation.saveIndividual(i, newIndiv); // only with tournament
-            newPopulation.saveIndividual(i, pop.getIndividual(i));
         }
         // Mutate population
         int mutate = 0;
@@ -51,17 +50,20 @@ public class Algorithm {
 
     // Mutate an individual
     private static void mutate(Individual indiv) {
-        // Loop through genes
         for (int i = 0; i < indiv.size(); i++) {
             // Vary gene by mutation offset
             double randSign = 1;
             if(Math.random() <= uniformRate)
                 randSign = -1;
+            if (i > 3) randSign *= 200;
             double gene = indiv.getGene(i) + randSign * mutationOffset;
+            // Check gene is within parameters
             if (gene < 0) gene *= (-1);
-            gene = Math.max (0, Math.min (1, gene)); // make sure gene is within parameters
-            if(gene != 0) indiv.setGene(i, gene);
-            else i--;
+            if (i < 4) gene = Math.max (0, Math.min (1, gene));
+                else gene = Math.max (1, Math.min (200, gene));
+            // Set gene or reset
+            if (gene != 0) indiv.setGene(i, gene);
+                else i--;
         }
     }
 
@@ -82,11 +84,10 @@ public class Algorithm {
     private static Individual crossover(Individual indiv1, Individual indiv2) {
         Individual newSol = new Individual();
         for (int i = 0; i < indiv1.size(); i++) {
-            if (Math.random() <= uniformRate) {
+            if (Math.random() <= uniformRate)
                 newSol.setGene(i, indiv1.getGene(i));
-            } else {
+            else
                 newSol.setGene(i, indiv2.getGene(i));
-            }
         }
         return newSol;
     }

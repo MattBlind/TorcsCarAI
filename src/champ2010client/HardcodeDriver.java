@@ -33,7 +33,7 @@ public class HardcodeDriver extends BackupController {
         int caseX = 0;
         distSensors = sensors.getTrackEdgeSensors();
         for(int i=8; i<11;i++){
-            if (distSensors[i]<10)
+            if (distSensors[i]<40)
                 caseX = 2;
             else if (distSensors[i]<100)
                     caseX = 1;

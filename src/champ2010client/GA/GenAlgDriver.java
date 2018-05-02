@@ -12,6 +12,8 @@ public class GenAlgDriver extends Controller {
     private double accel1;
     private double accel2;
     private double accel3;
+    private double dist1;
+    private double dist2;
     private double lastLapTime;
 
     public Action control(SensorModel sensorsModel) {
@@ -32,9 +34,9 @@ public class GenAlgDriver extends Controller {
         int caseX = 0;
         distSensors = sensors.getTrackEdgeSensors();
         for(int i=8; i<11;i++){
-            if (distSensors[i]<40)
+            if (distSensors[i]<dist1)
                 caseX = 2;
-            else if (distSensors[i]<90)
+            else if (distSensors[i]<dist2)
                 caseX = 1;
         }
         // accelerate on open road
