@@ -69,6 +69,8 @@ public class GenAlgDriver extends Controller {
         accel1 = paramSet[1];
         accel2 = paramSet[2];
         accel3 = paramSet[3];
+        dist1 = paramSet[4];
+        dist2 = paramSet[5];
     }
 
     public double getLastLapTime(){

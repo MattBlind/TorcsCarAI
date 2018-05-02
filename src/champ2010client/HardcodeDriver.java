@@ -3,7 +3,9 @@ package champ2010client;
 /**
  * Created by mattster on 06/11/17.
  */
-public class HardcodeDriver extends BackupController {
+public class HardcodeDriver extends Controller {
+
+    private double lastLapTime;
 
     public Action control(SensorModel sensorsModel) {
 
@@ -11,13 +13,12 @@ public class HardcodeDriver extends BackupController {
         action.gear = setGear(sensorsModel);
         speedByTrack(sensorsModel, action);
         steering(sensorsModel,action);
-        System.out.println(sensorsModel.getLastLapTime());
+        lastLapTime = sensorsModel.getLastLapTime();
         return action;
     }
 
     private void steering(SensorModel sensorsModel, Action action) {
-        double steering = (sensorsModel.getAngleToTrackAxis() - sensorsModel.getTrackPosition()*0.6);
-        action.steering = steering;
+        action.steering = (sensorsModel.getAngleToTrackAxis() - sensorsModel.getTrackPosition()*0.6);
     }
 
     private int setGear(SensorModel sensorsModel) {
@@ -40,10 +41,11 @@ public class HardcodeDriver extends BackupController {
         }
         if(caseX == 0) action.accelerate = 1;
             else if(caseX == 1) action.accelerate = 0.5;
-            else if(caseX == 2) {
-            System.out.println("case 2");
-                action.accelerate = 0.2;
-        }
+            else if(caseX == 2) action.accelerate = 0.2;
+    }
+
+    public double getLastLapTime(){
+        return lastLapTime;
     }
 
     @Override
@@ -55,4 +57,7 @@ public class HardcodeDriver extends BackupController {
     public void shutdown() {
         System.out.println("Game Over.");
     }
+
+    @Override
+    public void setParameters(double[] paramSet) { System.out.println("Not needed for this model"); }
 }

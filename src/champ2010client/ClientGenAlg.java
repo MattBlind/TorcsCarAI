@@ -3,14 +3,10 @@
  */
 package champ2010client;
 
-import champ2010client.Action;
-import champ2010client.Controller;
 import champ2010client.Controller.Stage;
 import champ2010client.GA.Algorithm;
 import champ2010client.GA.Population;
 import champ2010client.GA.Stats;
-import champ2010client.MessageBasedSensorModel;
-import champ2010client.SocketHandler;
 
 import java.util.StringTokenizer;
 
@@ -61,7 +57,7 @@ public class ClientGenAlg {
 
 
 		/* Build GA population */
-		Population myPop = new Population(75, true);
+		Population myPop = new Population(25, true);
 		int generationCount = 0;
 
 		/* Initialize some variables */
@@ -171,6 +167,7 @@ public class ClientGenAlg {
 		System.out.println(myPop.getFittest().getIndividualFitness());
 		mainStats.processData();
 		System.out.println(mainStats.toString());
+		ClientGAResult.main(myPop.getFittest().getAllGenes());
 
 	}
 

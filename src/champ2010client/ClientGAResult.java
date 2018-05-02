@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package champ2010client;
 
@@ -9,9 +9,9 @@ import champ2010client.Controller.Stage;
 
 /**
  * @author Daniele Loiacono
- * 
+ *
  */
-public class Client3 {
+public class ClientGAResult {
 
 	private static int UDP_TIMEOUT = 10000;
 	private static int port;
@@ -24,26 +24,27 @@ public class Client3 {
 	private static String trackName;
 
 	/**
-	 * @param args
-	 *            is used to define all the options of the client.
+	 * @param resultSet
+	 *            is used to define the driver behaviour.
 	 *            <port:N> is used to specify the port for the connection (default is 3001)
-	 *            <host:ADDRESS> is used to specify the address of the host where the server is running (default is localhost)  
-	 *            <id:ClientID> is used to specify the ID of the client sent to the server (default is championship2009) 
+	 *            <host:ADDRESS> is used to specify the address of the host where the server is running (default is localhost)
+	 *            <id:ClientID> is used to specify the ID of the client sent to the server (default is championship2009)
 	 *            <verbose:on> is used to set verbose mode on (default is off)
 	 *            <maxEpisodes:N> is used to set the number of episodes (default is 1)
 	 *            <maxSteps:N> is used to set the max number of steps for each episode (0 is default value, that means unlimited number of steps)
 	 *            <stage:N> is used to set the current stage: 0 is WARMUP, 1 is QUALIFYING, 2 is RACE, others value means UNKNOWN (default is UNKNOWN)
 	 *            <trackName:name> is used to set the name of current track
 	 */
-	public static void main(String[] args) {
-		parseParameters(args);
+	public static void main(double[] resultSet) {
+		parseParameters();
 		SocketHandler mySocket = new SocketHandler(host, port, verbose);
 		String inMsg;
 
-		Controller driver = load("champ2010client.HardcodeDriver");
+		Controller driver = load("champ2010client.GA.GenAlgDriver");
+		driver.setParameters(resultSet);
 		driver.setStage(stage);
 		driver.setTrackName(trackName);
-		
+
 		/* Build init string */
 		float[] angles = driver.initAngles();
 		String initStr = clientId + "(init";
@@ -51,7 +52,7 @@ public class Client3 {
 			initStr = initStr + " " + angles[i];
 		}
 		initStr = initStr + ")";
-		
+
 		long curEpisode = 0;
 		boolean shutdownOccurred = false;
 		do {
@@ -121,7 +122,7 @@ public class Client3 {
 
 	}
 
-	private static void parseParameters(String[] args) {
+	private static void parseParameters() {
 		/*
 		 * Set default values for the options
 		 */
@@ -133,57 +134,6 @@ public class Client3 {
 		maxSteps = 0;
 		stage = Stage.UNKNOWN;
 		trackName = "unknown";
-		
-		for (int i = 1; i < args.length; i++) {
-			StringTokenizer st = new StringTokenizer(args[i], ":");
-			String entity = st.nextToken();
-			String value = st.nextToken();
-			if (entity.equals("port")) {
-				port = Integer.parseInt(value);
-			}
-			if (entity.equals("host")) {
-				host = value;
-			}
-			if (entity.equals("id")) {
-				clientId = value;
-			}
-			if (entity.equals("verbose")) {
-				if (value.equals("on"))
-					verbose = true;
-				else if (value.equals(false))
-					verbose = false;
-				else {
-					System.out.println(entity + ":" + value
-							+ " is not a valid option");
-					System.exit(0);
-				}
-			}
-			if (entity.equals("id")) {
-				clientId = value;
-			}
-			if (entity.equals("stage")) {
-				stage = Stage.fromInt(Integer.parseInt(value));
-			}
-			if (entity.equals("trackName")) {
-				trackName = value;
-			}
-			if (entity.equals("maxEpisodes")) {
-				maxEpisodes = Integer.parseInt(value);
-				if (maxEpisodes <= 0) {
-					System.out.println(entity + ":" + value
-							+ " is not a valid option");
-					System.exit(0);
-				}
-			}
-			if (entity.equals("maxSteps")) {
-				maxSteps = Integer.parseInt(value);
-				if (maxSteps < 0) {
-					System.out.println(entity + ":" + value
-							+ " is not a valid option");
-					System.exit(0);
-				}
-			}
-		}
 	}
 
 	private static Controller load(String name) {

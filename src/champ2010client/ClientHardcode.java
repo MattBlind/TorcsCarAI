@@ -59,6 +59,7 @@ public class ClientHardcode {
 
         long curEpisode = 0;
         boolean shutdownOccurred = false;
+        double lapTime = 0;
         do {
 
             /*
@@ -73,6 +74,7 @@ public class ClientHardcode {
             /*
              * Start to drive
              */
+
             long currStep = 0;
             while (true) {
                 /*
@@ -109,6 +111,8 @@ public class ClientHardcode {
                         action.restartRace = true;
 
                     currStep++;
+                    if(lapTime == 0)
+                        lapTime = driver.getLastLapTime();
                     mySocket.send(action.toString());
                 } else
                     System.out.println("Server did not respond within the timeout");
@@ -119,10 +123,12 @@ public class ClientHardcode {
         /*
          * Shutdown the controller
          */
+
         driver.shutdown();
         mySocket.close();
         System.out.println("Client shutdown.");
         System.out.println("Bye, bye!");
+        System.out.println(lapTime);
 
     }
 

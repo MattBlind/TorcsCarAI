@@ -1,26 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/champ2010client/Client3.java" line="42" />
+    <bookmark url="file://$PROJECT_DIR$/src/champ2010client/ClientGAResult.java" line="42" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="471d9346-668d-4c32-b931-9e6a1de8444f" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/champ2010client/ClientHardcode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TorcsCarAI/champ2010client/BackupClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TorcsCarAI/champ2010client/BackupClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TorcsCarAI/champ2010client/Client.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TorcsCarAI/champ2010client/Client3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TorcsCarAI/champ2010client/Client3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TorcsCarAI/champ2010client/GA/Algorithm.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TorcsCarAI/champ2010client/GA/Algorithm.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TorcsCarAI/champ2010client/GA/FitnessCalc.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TorcsCarAI/champ2010client/Client3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TorcsCarAI/champ2010client/ClientGenAlg.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TorcsCarAI/champ2010client/ClientGenAlg.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/TorcsCarAI/champ2010client/GA/GenAlgDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TorcsCarAI/champ2010client/GA/GenAlgDriver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TorcsCarAI/champ2010client/GA/Individual.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TorcsCarAI/champ2010client/GA/Individual.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TorcsCarAI/champ2010client/GA/TorcsGA.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/champ2010client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/champ2010client/ClientGenAlg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/champ2010client/GA/Algorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/champ2010client/GA/Algorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/champ2010client/GA/FitnessCalc.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/TorcsCarAI/champ2010client/HardcodeDriver.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TorcsCarAI/champ2010client/HardcodeDriver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/champ2010client/Client3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/champ2010client/ClientGAResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/champ2010client/ClientGenAlg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/champ2010client/ClientGenAlg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/champ2010client/ClientHardcode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/champ2010client/ClientHardcode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/champ2010client/GA/GenAlgDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/champ2010client/GA/GenAlgDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/champ2010client/GA/Individual.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/champ2010client/GA/Individual.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/champ2010client/GA/TorcsGA.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/champ2010client/HardcodeDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/champ2010client/HardcodeDriver.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -39,38 +33,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ClientGenAlg.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ClientGenAlg.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/champ2010client/ClientGenAlg.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="80" column="29" selection-start-line="80" selection-start-column="29" selection-end-line="80" selection-end-column="29" />
+            <state relative-caret-position="140">
+              <caret line="59" column="44" selection-start-line="59" selection-start-column="44" selection-end-line="59" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Client3.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/champ2010client/Client3.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="59" column="21" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ClientHardcode.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ClientHardcode.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/champ2010client/ClientHardcode.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BackupClient.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/champ2010client/BackupClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1596">
-              <caret line="122" column="34" selection-start-line="122" selection-start-column="34" selection-end-line="122" selection-end-column="34" />
+            <state relative-caret-position="-686">
+              <caret line="61" column="27" selection-start-line="61" selection-start-column="27" selection-end-line="61" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -78,8 +57,20 @@
       <file leaf-file-name="HardcodeDriver.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/champ2010client/HardcodeDriver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="490">
-              <caret line="35" column="32" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
+            <state relative-caret-position="469">
+              <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GenAlgDriver.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/champ2010client/GA/GenAlgDriver.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="455">
+              <caret line="75" column="4" selection-start-line="75" selection-start-column="4" selection-end-line="77" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -100,18 +91,6 @@
               <caret line="90" column="8" selection-start-line="90" selection-start-column="8" selection-end-line="90" selection-end-column="8" />
               <folding>
                 <marker date="1525278570984" expanded="true" signature="1068:1264" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GenAlgDriver.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/champ2010client/GA/GenAlgDriver.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="34" column="49" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="49" />
-              <folding>
-                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -159,7 +138,6 @@
         <option value="$PROJECT_DIR$/src/champ2010client/Client2.java" />
         <option value="$PROJECT_DIR$/src/champ2010client/GA/MattDriverGA.java" />
         <option value="$PROJECT_DIR$/src/champ2010client/GA/TorcsGA.java" />
-        <option value="$PROJECT_DIR$/src/champ2010client/BackupController.java" />
         <option value="$PROJECT_DIR$/src/champ2010client/Controller.java" />
         <option value="$PROJECT_DIR$/src/champ2010client/GA/FitnessCalc.java" />
         <option value="$PROJECT_DIR$/src/champ2010client/MattDriverSimple.java" />
@@ -168,21 +146,23 @@
         <option value="$PROJECT_DIR$/src/champ2010client/SocketHandler.java" />
         <option value="$PROJECT_DIR$/src/champ2010client/GA/Population.java" />
         <option value="$PROJECT_DIR$/src/champ2010client/GA/Stats.java" />
-        <option value="$PROJECT_DIR$/src/champ2010client/GA/GenAlgDriver.java" />
         <option value="$PROJECT_DIR$/src/champ2010client/GA/Individual.java" />
         <option value="$PROJECT_DIR$/src/champ2010client/GA/Algorithm.java" />
         <option value="$PROJECT_DIR$/src/champ2010client/Client.java" />
-        <option value="$PROJECT_DIR$/src/champ2010client/HardcodeDriver.java" />
-        <option value="$PROJECT_DIR$/src/champ2010client/Client3.java" />
-        <option value="$PROJECT_DIR$/src/champ2010client/ClientGenAlg.java" />
         <option value="$PROJECT_DIR$/src/champ2010client/BackupClient.java" />
+        <option value="$PROJECT_DIR$/src/champ2010client/GA/GenAlgDriver.java" />
+        <option value="$PROJECT_DIR$/src/champ2010client/BackupController.java" />
+        <option value="$PROJECT_DIR$/src/champ2010client/HardcodeDriver.java" />
         <option value="$PROJECT_DIR$/src/champ2010client/ClientHardcode.java" />
+        <option value="$PROJECT_DIR$/src/champ2010client/Client3.java" />
+        <option value="$PROJECT_DIR$/src/champ2010client/ClientGAResult.java" />
+        <option value="$PROJECT_DIR$/src/champ2010client/ClientGenAlg.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1365" />
-    <option name="y" value="-17" />
+    <option name="x" value="-1" />
+    <option name="y" value="751" />
     <option name="width" value="1368" />
     <option name="height" value="786" />
   </component>
@@ -267,8 +247,8 @@
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
-    <configuration name="Client3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="champ2010client.Client3" />
+    <configuration name="ClientGAResult" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="champ2010client.ClientGAResult" />
       <module name="TorcsCarAI" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -492,14 +472,14 @@
     </configuration>
     <list>
       <item itemvalue="Application.TorcsGA" />
-      <item itemvalue="Application.Client3" />
+      <item itemvalue="Application.ClientGAResult" />
       <item itemvalue="Application.ClientGenAlg" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.ClientGenAlg" />
         <item itemvalue="Application.TorcsGA" />
-        <item itemvalue="Application.Client3" />
+        <item itemvalue="Application.ClientGAResult" />
       </list>
     </recent_temporary>
   </component>
@@ -517,7 +497,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-17" width="1368" height="786" extended-state="6" />
+    <frame x="-1367" y="-17" width="1368" height="786" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="5" />
@@ -533,7 +513,7 @@
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.329927" />
       <window_info id="Capture Tool" order="0" />
       <window_info anchor="right" id="Designer" order="0" />
-      <window_info active="true" content_ui="combo" id="Project" order="3" sideWeight="0.5674891" visible="true" weight="0.14787701" />
+      <window_info content_ui="combo" id="Project" order="3" sideWeight="0.5674891" visible="true" weight="0.14787701" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.3280116" />
       <window_info id="Structure" order="4" sideWeight="0.43251088" side_tool="true" weight="0.14787701" />
       <window_info anchor="right" id="Ant Build" order="3" weight="0.24963397" />
@@ -614,7 +594,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/champ2010client/Client3.java">
+    <entry file="file://$PROJECT_DIR$/src/champ2010client/ClientGAResult.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="588">
           <caret line="42" column="68" selection-start-line="42" selection-start-column="68" selection-end-line="42" selection-end-column="68" />
@@ -680,7 +660,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/champ2010client/Client3.java">
+    <entry file="file://$PROJECT_DIR$/src/champ2010client/ClientGAResult.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
@@ -757,7 +737,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/champ2010client/Client3.java">
+    <entry file="file://$PROJECT_DIR$/src/champ2010client/ClientGAResult.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="19" column="31" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
@@ -796,13 +776,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
           <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/champ2010client/BackupController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-289">
-          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -888,13 +861,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/champ2010client/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="50" column="57" selection-start-line="50" selection-start-column="57" selection-end-line="50" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/champ2010client/GA/Population.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="546">
@@ -902,27 +868,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/champ2010client/GA/GenAlgDriver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="34" column="49" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/champ2010client/GA/Individual.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="24" column="18" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/champ2010client/GA/FitnessCalc.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="70">
           <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/champ2010client/BackupClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1596">
+          <caret line="122" column="34" selection-start-line="122" selection-start-column="34" selection-end-line="122" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -936,38 +892,68 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/champ2010client/GA/Individual.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="24" column="18" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/champ2010client/GA/GenAlgDriver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="75" column="4" selection-start-line="75" selection-start-column="4" selection-end-line="77" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/champ2010client/HardcodeDriver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="35" column="32" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
+        <state relative-caret-position="469">
+          <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/champ2010client/ClientGenAlg.java">
+    <entry file="file://$PROJECT_DIR$/src/champ2010client/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="80" column="29" selection-start-line="80" selection-start-column="29" selection-end-line="80" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/champ2010client/Client3.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="59" column="21" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/champ2010client/BackupClient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1596">
-          <caret line="122" column="34" selection-start-line="122" selection-start-column="34" selection-end-line="122" selection-end-column="34" />
+        <state relative-caret-position="462">
+          <caret line="50" column="57" selection-start-line="50" selection-start-column="57" selection-end-line="50" selection-end-column="57" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/champ2010client/ClientHardcode.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="15" column="26" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+        <state relative-caret-position="-686">
+          <caret line="61" column="27" selection-start-line="61" selection-start-column="27" selection-end-line="61" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/champ2010client/ClientGAResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1197">
+          <caret line="27" column="56" selection-start-line="27" selection-start-column="56" selection-end-line="27" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/champ2010client/BackupController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="2" column="30" lean-forward="true" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/champ2010client/ClientGenAlg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="59" column="44" selection-start-line="59" selection-start-column="44" selection-end-line="59" selection-end-column="44" />
         </state>
       </provider>
     </entry>
