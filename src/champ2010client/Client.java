@@ -67,7 +67,7 @@ public class Client {
 		/* Initialize some variables */
 		long curEpisode = 0;
 		boolean shutdownOccurred = false;
-		int stepLimit = 14300; // acceptable steps for this track
+		int stepLimit = 14000; // acceptable steps for this track
 		int generationLimit = 5;
 		Stats mainStats = new Stats(generationLimit, myPop.size());
 		do {
@@ -106,6 +106,7 @@ public class Client {
 							if (inMsg.indexOf("***shutdown***") >= 0) {
 								shutdownOccurred = true;
 								System.out.println("Server shutdown!");
+								System.out.println(currStep);
 								break;
 							}
 

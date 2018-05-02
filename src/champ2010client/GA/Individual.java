@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Individual {
 
-    static int defaultGeneLength = 4;
+    private static int defaultGeneLength = 4;
     private double[] genes = new double[defaultGeneLength];
     // Cache
     private double fitness = 0;

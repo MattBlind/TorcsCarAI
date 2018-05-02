@@ -45,7 +45,7 @@ public class GenAlgDriver extends Controller {
         else if(caseX == 2) {
             if(Math.abs(sensors.getTrackPosition()) >= 1) {
                 action.gear = -1;
-                action.steering = -1 * action.steering;
+                action.steering = -1 * action.steering /2;
                 action.accelerate = accel2;
             }
             else action.accelerate = accel3;
