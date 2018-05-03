@@ -13,7 +13,7 @@ import champ2010client.Controller.Stage;
  */
 public class ClientGAResult {
 
-	private static int UDP_TIMEOUT = 10000;
+	private static int UDP_TIMEOUT = 2000;
 	private static int port;
 	private static String host;
 	private static String clientId;
