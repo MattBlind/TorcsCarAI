@@ -28,16 +28,15 @@ public class GenAlgDriver extends Controller {
         action.steering = (sensorsModel.getAngleToTrackAxis() - sensorsModel.getTrackPosition()*steerCoef);
     }
 
-
     private void speedByTrack(SensorModel sensors, Action action) {
         double[] distSensors;
         int caseX = 0;
         distSensors = sensors.getTrackEdgeSensors();
         for(int i=8; i<11;i++){
             if (distSensors[i]<dist1)
-                caseX = 2;
-            else if (distSensors[i]<dist2)
                 caseX = 1;
+            else if (distSensors[i]<dist2)
+                caseX = 2;
         }
         // accelerate on open road
         if(caseX == 0) action.accelerate = accel1;

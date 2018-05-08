@@ -3,9 +3,9 @@ package champ2010client;
 /**
  * Created by mattster on 06/11/17.
  */
-public class MattDriverSimple extends BackupController {
+public class SimpleSoloDriver extends BackupController {
 
-    double maintainSpeed = 45;
+    double maintainSpeed = 50;
     public Action control(SensorModel sensorsModel) {
 
         Action action = new Action();

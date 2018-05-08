@@ -57,7 +57,7 @@ public class ClientGenAlg {
 
 
 		/* Build GA population */
-		Population myPop = new Population(25, true);
+		Population myPop = new Population(50, true);
 		int generationCount = 0;
 
 		/* Initialize some variables */
@@ -124,15 +124,14 @@ public class ClientGenAlg {
 								if(!isLastGuy) {
 									action.restartRace = true;
 									System.out.println(fitness);
-									System.out.println(currStep);
 								}
 								else // run until game closes
 									action = driver.control(new MessageBasedSensorModel(inMsg));
-
 							}
 
 							if(currStep > stepLimit){
 								System.out.println("Possible 0 reset");
+								mainStats.fail();
 								i = resetIndividual(myPop, i, currStep);
 								action.restartRace = true;
 							}
@@ -160,7 +159,6 @@ public class ClientGenAlg {
 		 */
 		driver.shutdown();
 		mySocket.close();
-		System.out.println("shutdownOccurred is "+shutdownOccurred);
 		System.out.println("Client shutdown.");
 		System.out.println("Bye, bye!");
 		System.out.println(myPop.getFittest().toString());
